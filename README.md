@@ -54,7 +54,12 @@ log-alert-tool/
 python3 parser.py
 
 alerts/alerts.csv
+```csv
 timestamp,alert_type,ip,severity,raw
 2025-07-15T21:10:00,Invalid user login attempt,192.168.1.202,high,"Invalid user admin from 192.168.1.202 port 22"
 2025-07-15T21:12:01,Failed SSH login,192.168.1.101,medium,"Failed password for root from 192.168.1.101 port 22 ssh2"
 2025-07-15T21:13:00,Successful SSH login,192.168.1.10,info,"Accepted password for user1 from 192.168.1.10 port 22 ssh2"
+
+## Screenshot
+
+[![Tool Output Screenshot](screenshot.png)](screenshot.png)
