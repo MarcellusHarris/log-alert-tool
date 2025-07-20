@@ -1,62 +1,40 @@
-# Log Alert Generator
+#  Log Alert Tool
 
-![Python](https://img.shields.io/badge/language-python-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+A Python-based log parsing tool that analyzes authentication logs for suspicious login activity, such as brute-force attempts, failed logins, or invalid users. It generates alerts into a structured CSV file — perfect for cybersecurity students, blue teamers, or anyone learning the fundamentals of threat detection.
 
-A Python-based log parser that scans authentication logs (`auth.log`) for suspicious activity like brute-force SSH attempts, invalid user logins, and unauthorized access. Alerts are automatically generated and exported to a `.csv` file for quick triage or integration with other tools.
-
----
-
-##  Threats Addressed
-
-| Threat                          | Detection Logic                                   |
-|--------------------------------|---------------------------------------------------|
-| Brute-force login attempts     | Multiple failed SSH logins from the same IP       |
-| Credential stuffing / guessing | "Invalid user" entries with external IPs          |
-| Unauthorized access            | Unexpected successful logins                      |
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-##  Features
-
--  Parse Linux-style `auth.log` files
--  Detect failed SSH login attempts
--  Flag invalid usernames
--  Track successful logins (for auditing)
--  Export alerts to structured `.csv` format
-- Easy to customize or expand with new patterns
+##  Live Project Page  
+ [https://marcellusharris.github.io/log-alert-tool/](https://marcellusharris.github.io/log-alert-tool/)
 
 ---
 
-## Project Structure
+##  Key Features
 
-log-alert-tool/
-├── parser.py # Main script
-├── sample_logs/
-│ └── auth.log # Sample log input
-├── alerts/
-│ └── alerts.csv # Output alerts
-├── screenshot.png # Output preview
-├── README.md
-└── .gitignore
-
+- Detects suspicious login attempts (failed SSH, invalid users)
+- Parses logs using Python regex
+- Saves alerts to CSV for easy review or SOC integration
+- Lightweight and beginner-friendly
 
 ---
 
-## How to Use
+##  Screenshot
 
-### Requirements
-- Python 3.x
+![Sample Output](log-tool-output.png)
 
-### Run the Tool
+---
+
+##  How to Use
+
+### 1. Clone the Repo
 
 ```bash
-python3 parser.py
+git clone https://github.com/MarcellusHarris/log-alert-tool.git
+cd log-alert-tool
 
-alerts/alerts.csv
-```csv
-timestamp,alert_type,ip,severity,raw
-2025-07-15T21:10:00,Invalid user login attempt,192.168.1.202,high,"Invalid user admin from 192.168.1.202 port 22"
 2025-07-15T21:12:01,Failed SSH login,192.168.1.101,medium,"Failed password for root from 192.168.1.101 port 22 ssh2"
 2025-07-15T21:13:00,Successful SSH login,192.168.1.10,info,"Accepted password for user1 from 192.168.1.10 port 22 ssh2"
 
