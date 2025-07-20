@@ -1,5 +1,5 @@
 #  Log Alert Tool
-
+>  Python tool to detect failed login attempts from system logs and generate structured alert reports in CSV format.
 A Python-based log parsing tool that analyzes authentication logs for suspicious login activity, such as brute-force attempts, failed logins, or invalid users. It generates alerts into a structured CSV file — perfect for cybersecurity students, blue teamers, or anyone learning the fundamentals of threat detection.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
