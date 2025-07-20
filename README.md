@@ -27,7 +27,7 @@ A Python-based log parsing tool that analyzes authentication logs for suspicious
 
 ---
 
-Real-World Scenario
+## Real-World Scenario
 This tool mimics a real SOC analyst workflow by scanning logs for brute-force attempts and privilege escalation behaviors. It’s a great stepping stone toward writing detection rules or building basic SIEM integrations.
 
 Future Ideas
