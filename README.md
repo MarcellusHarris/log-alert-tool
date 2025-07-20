@@ -27,6 +27,18 @@ A Python-based log parsing tool that analyzes authentication logs for suspicious
 
 ---
 
+Real-World Scenario
+This tool mimics a real SOC analyst workflow by scanning logs for brute-force attempts and privilege escalation behaviors. It’s a great stepping stone toward writing detection rules or building basic SIEM integrations.
+
+Future Ideas
+Real-time log monitoring with cron
+
+Integrate with a simple alert dashboard
+
+Add email notifications or webhook support
+
+Port to PowerShell or Bash for cross-platform use
+
 ##  How to Use
 
 ### 1. Clone the Repo
@@ -47,15 +59,3 @@ python log_alert.py sample-log.txt
 Date,IP Address,Alert Type,Username
 Jul 15 19:00:00,192.168.1.100,Invalid User,admin
 Jul 15 19:01:00,192.168.1.105,Failed Password,root
-
-Real-World Scenario
-This tool mimics a real SOC analyst workflow by scanning logs for brute-force attempts and privilege escalation behaviors. It’s a great stepping stone toward writing detection rules or building basic SIEM integrations.
-
-Future Ideas
-Real-time log monitoring with cron
-
-Integrate with a simple alert dashboard
-
-Add email notifications or webhook support
-
-Port to PowerShell or Bash for cross-platform use
